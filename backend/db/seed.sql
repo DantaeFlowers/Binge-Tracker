@@ -75,8 +75,3 @@ INSERT INTO shows_users(show_id, user_id)
 -- INSERT COMMENTS
 INSERT INTO comments (comment_body, user_id, show_id)
     VALUES ('BEST SHOW EVER!!', 1, 1), ('Of course you would think so Jon', 2, 1);
-
-
-
-
-

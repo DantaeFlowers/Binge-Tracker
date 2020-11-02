@@ -18,11 +18,7 @@ const getByUsername = async (username) => {
 
 //QUERY to GET user by id 
 const getUserById = async (params) => {
-   const requestQuery = `SELECT username, avatar_url,
-                           FROM users 
-                               INNER JOIN posts ON users.username = posts.p_username
-                               FULL JOIN comments ON posts.id = comments.c_post_id
-                                WHERE users.id = $1`
+   const requestQuery = `SELECT FROM users WHERE id = ` 
    const user = await db.any(requestQuery, [params])
    return user
 }
